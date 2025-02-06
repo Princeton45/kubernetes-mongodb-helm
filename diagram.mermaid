@@ -1,0 +1,45 @@
+graph LR
+    subgraph Internet
+        User(User)
+    end
+
+    subgraph "Linode Kubernetes Engine"
+        subgraph "Ingress Layer"
+            NI[Nginx Ingress Controller]
+        end
+
+        subgraph "Application Layer"
+            ME[Mongo Express]
+        end
+
+        subgraph "Database Layer"
+            MDB1[(MongoDB Primary)]
+            MDB2[(MongoDB Secondary 1)]
+            MDB3[(MongoDB Secondary 2)]
+        end
+
+        subgraph "Storage Layer"
+            PV1[Persistent Volume 1]
+            PV2[Persistent Volume 2]
+            PV3[Persistent Volume 3]
+        end
+    end
+
+    User -->|HTTP| NI
+    NI -->|HTTP| ME
+    ME -->|Internal Connection| MDB1
+    MDB1 <--> MDB2
+    MDB1 <--> MDB3
+    MDB2 <--> MDB3
+    MDB1 --- PV1
+    MDB2 --- PV2
+    MDB3 --- PV3
+
+    style MDB1 fill:#f96,stroke:#333
+    style MDB2 fill:#f96,stroke:#333
+    style MDB3 fill:#f96,stroke:#333
+    style ME fill:#9cf,stroke:#333
+    style NI fill:#90EE90,stroke:#333
+    style PV1 fill:#FFE4B5,stroke:#333
+    style PV2 fill:#FFE4B5,stroke:#333
+    style PV3 fill:#FFE4B5,stroke:#333
