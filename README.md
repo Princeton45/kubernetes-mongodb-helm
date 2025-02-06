@@ -3,7 +3,7 @@
 ## Project Overview
 I successfully deployed a stateful MongoDB service with a web-based UI (Mongo Express) on a Linode Kubernetes Engine (LKE) cluster, utilizing Helm for package management and Nginx Ingress for external access.
 
-![diagram](https://github.com/Princeton45/jenkins-docker-ec2-cicd/blob/main/images/diagram.jpg)
+![diagram](https://github.com/Princeton45/kubernetes-mongodb-helm/blob/main/images/diagram.jpg)
 
 
 ## Infrastructure Setup
