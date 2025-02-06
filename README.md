@@ -5,6 +5,13 @@ I successfully deployed a stateful MongoDB service with a web-based UI (Mongo Ex
 
 ![diagram](https://github.com/Princeton45/kubernetes-mongodb-helm/blob/main/images/diagram.jpg)
 
+## Technologies Used
+- Kubernetes (LKE)
+- Helm
+- MongoDB
+- Mongo Express
+- Nginx Ingress
+- Linode Cloud Storage
 
 ## Infrastructure Setup
 - Created a Kubernetes cluster with 2 worker nodes using Linode's Kubernetes Engine (LKE)
@@ -14,14 +21,6 @@ I successfully deployed a stateful MongoDB service with a web-based UI (Mongo Ex
 - Downloaded the `test-kubeconfig.yaml` file (which contains all the certificate information for the cluster) and added it to my User `KUBECONFIG` environment variable so I can talk to the cluster with `kubectl`
 
 ![variable](https://github.com/Princeton45/kubernetes-mongodb-helm/blob/main/images/variable.png)
-
-## Technologies Used
-- Kubernetes (LKE)
-- Helm
-- MongoDB
-- Mongo Express
-- Nginx Ingress
-- Linode Cloud Storage
 
 ## MongoDB Deployment
 - Deployed MongoDB using Helm chart with replication enabled & Linode persistent cloud storage
