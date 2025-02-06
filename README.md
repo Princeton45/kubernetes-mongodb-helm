@@ -131,7 +131,7 @@ This `--set controller.publishService.enabled=true` makes sures that there is a 
 
 NGINX Ingress controller is now deployed
 
-![nginx](https://github.com/Princeton45/kubernetes-mongodb-helm/blob/main/images/nginx-deployment.png)
+![nginx](https://github.com/Princeton45/kubernetes-mongodb-helm/blob/main/images/nginx-deployed.png)
 
 This NodeBalancer in Linode was automatically created when I deployed the Ingress controller with Helm. This NodeBalancer will now become the entrypoint into the cluster for external web traffic with its public IP of `45.79.245.223`
 
